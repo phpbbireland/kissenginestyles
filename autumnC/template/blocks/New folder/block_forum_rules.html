@@ -1,0 +1,15 @@
+<!-- IDTAG block_forum_rules.hrml starts 21 August 2006 -->
+<!-- IF S_FORUM_RULES -->
+<!-- INCLUDE blocks/blocks_header_left.html -->{L_FORUM_RULES} ({TO_DAY}) 214<!-- INCLUDE blocks/blocks_header_right.html -->
+	<dd style="text-align:center;">
+		<!-- IF U_FORUM_RULES -->
+		<h3 style="color:red">{L_FORUM_RULES}</h3><br /><a href="{U_FORUM_RULES}"><b>{L_FORUM_RULES_LINK}</b></a>
+		<!-- ELSE -->
+		<h3 style="color:red">{L_FORUM_RULES}</h3><br />
+		{FORUM_RULES}
+		<!-- ENDIF -->
+	</dd>
+<!-- INCLUDE blocks/blocks_footer.html -->
+<br clear="all" />
+<!-- ENDIF -->
+<!-- IDTAG rules ends -->

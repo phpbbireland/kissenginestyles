@@ -1,0 +1,22 @@
+<!-- IDTAG block_forum_categories.html starts -->
+<!-- BEGIN iforumrow -->
+	<!-- IF iforumrow.S_IS_CAT -->
+	<dd><img src="{iforumrow.FORUM_IMAGE_SRC}" style="width:18px; height:18px; float:left; margin-top:2px; position:relative;" ></dd>
+	<dd style="text-align:left; padding-left:20px; position:relative;"><b><a href="{iforumrow.U_VIEWFORUM}">{iforumrow.FORUM_NAME}</a></b></dd>
+	<dd style="text-align:left; padding-left:20px; position:relative;"><span class="gensmall">{iforumrow.FORUM_DESC}</span></dd>
+	<dd style="text-align:left; padding-left:20px; position:relative;"><span class="gen"><b>{L_TOPICS}:</b> {iforumrow.FORUM_TOPICS}  <b>{L_POSTS}:</b> {iforumrow.FORUM_POSTS}</span></dd>
+	<hr>
+	<!-- ELSEIF iforumrow.S_IS_LINK -->
+		<dd style="text-align:left; padding:1px; position:relative;">
+			<img src="{iforumrow.FORUM_IMAGE_SRC}" style="width:18px; height:18px; float:left; margin-right:5px; margin-bottom:20px; position:relative;" >
+			<b><a href="{iforumrow.U_VIEWFORUM}">{iforumrow.FORUM_NAME}</a></b>
+		</dd>
+		<!-- IF iforumrow.CLICKS -->
+		<dd style="text-align:left; margin-left:1px; position:relative;"><span class="gensmall">{L_REDIRECTS}: {iforumrow.CLICKS}</span></dd>
+		&nbsp;
+		<!-- ENDIF -->
+	<!-- ENDIF -->
+	<!-- BEGINELSE -->
+	<dd align="center"><p class="gensmall">{L_NO_FORUMS}</p></dd>
+<!-- END iforumrow -->
+<!-- IDTAG block_forum_categories.html ends -->

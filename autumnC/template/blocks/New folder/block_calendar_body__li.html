@@ -1,0 +1,67 @@
+
+<!-- BEGIN switch_calendar_add_events -->
+<form name="mini_cal" id ="mini_cal" action="{S_CALENDAR_ACTION}" method="post">
+<!-- END switch_calendar_add_events -->
+
+<div align="center" width="98%" style="background:#F9F9F9; ">
+
+<dd align="center" width="98%">
+	<div style="width:18px; height:18px; position: absolute; left: 16px; top:30px;  margin-bottom:18px;" >{U_PREV_MONTH}</div>
+	<div style="height:18px; margin-bottom:18px;" ><b><font color="#567592">{L_CALENDAR_MONTH}</font></b></div>
+	<div style="width:18px; height:18px; position: absolute; right: 14px; top:30px; margin-bottom:18px; position: 0 100%" >{U_NEXT_MONTH}</div>
+</dd>
+<dd>
+	<div style="position: absolute; left: 18px;  top:45px; float:left; margin-bottom:14px;"><font color="#F20000">{L_CALENDAR_SUN}</font></div>
+	<div style="position: absolute; left: 41px;  top:45px; float:left; margin-bottom:14px;"><font color="#527096">{L_CALENDAR_MON}</font></div>
+	<div style="position: absolute; left: 62px;  top:45px; float:left; margin-bottom:14px;"><font color="#527096">{L_CALENDAR_TUE}</font></div>
+	<div style="position: absolute; left: 80px;  top:45px; float:left; margin-bottom:14px;"><font color="#527096">{L_CALENDAR_WED}</font></div>
+	<div style="position: absolute; left: 104px; top:45px; float:left; margin-bottom:14px;"><font color="#527096">{L_CALENDAR_THU}</font></div>
+	<div style="position: absolute; left: 129px; top:45px; float:left; margin-bottom:14px;"><font color="#527096">{L_CALENDAR_FRI}</font></div>
+	<div style="position: absolute; left: 148px; top:45px; float:left; margin-bottom:14px;"><font color="#527096">{L_CALENDAR_SAT}</font></div>
+</dd>
+			
+<dd style="font-size:10px; margin-left:3px;" width="98%" >
+	<!-- BEGIN calendar_row -->
+		<!-- BEGIN calendar_days -->
+		<div style="width:22px; text-align:right; float:left; position:relative;">{calendar_row.calendar_days.CALENDAR_DAY}&nbsp;</div>
+		<!-- END calendar_days -->
+	<!-- END calendar_row -->
+	</font>
+</dd>
+<br />
+<br />
+<br />
+<br />
+
+
+<!--
+
+<!-- BEGIN switch_calendar_birthdays -->
+<dd class="row1cal" align="left"><span class="gensmall">{L_WHOSBIRTHDAY_TODAY}</span></dd>
+<dd class="row1cal" align="left"><span class="gensmall">{L_WHOSBIRTHDAY_WEEK}</span></dd> 
+<!-- END switch_calendar_birthdays -->
+<!-- BEGIN switch_calendar_events -->
+<dd class="row2cal" height="24"><span class="">{L_CALENDAR_EVENTS}</span></dd>
+<!-- END switch_calendar_events -->
+<!-- BEGIN calendar_events -->
+<dd class="row1cal"><span class="gensmall">{calendar_events.CALENDAR_EVENT_DATE} - <a href="{calendar_events.U_CALENDAR_EVENT}" class="gensmall">{calendar_events.S_CALENDAR_EVENT}</a></span></dd>
+<!-- END calendar_events -->
+<!-- BEGIN calendar_no_events -->
+<dd class="row1cal"><span class="genmed">{L_CALENDAR_NO_EVENTS}</span></dd>
+<!-- END calendar_no_events -->
+<!-- BEGIN switch_calendar_add_events -->
+<dd class="row1cal" height="24" align="center">
+     <span class="genmed">
+         {S_CALENDAR_EVENTS_FORUMS_LIST} <input type="submit" value="{L_CALENDAR_ADD_EVENT}" class="liteoption" />
+         <input type="Hidden" name="mode" id="mode" value="newtopic" />
+     </span>
+</dd>
+<!-- END switch_calendar_add_events -->
+
+-->
+
+</div>
+<!-- BEGIN switch_calendar_add_events -->
+</form>
+<!-- END switch_calendar_add_events -->
+<br /> 

@@ -1,0 +1,64 @@
+<!-- IDTAG block_login starts 12 April 2007 -->
+<div style="text-align:center;">
+	<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
+	<form method="post" action="{S_LOGIN_ACTION}" class="headerspace">
+		<dl>
+			<dd><div style="text-align:center;"><img src="{T_THEME_PATH}/images/no_avatar.gif" alt="" /></div></dd>
+		</dl>
+		<dl>
+			<dd><label for="username">{L_USERNAME}:</label></dd>
+			<dd><div style="text-align:center;"><input type="text" tabindex="1" name="username" id="username" size="20" maxlength="40" value="{USERNAME}" class="inputbox autowidth" /></div></dd>
+		</dl>
+		<dl>
+			<dd><label for="password">{L_PASSWORD}:</label></dd>
+			<dd style="text-align:center;"><div style="text-align:center;"><input type="password" tabindex="2" id="password" name="password" size="20" maxlength="25" class="inputbox autowidth" /></div></dd>
+			<!-- IF S_DISPLAY_FULL_LOGIN and (U_SEND_PASSWORD or U_RESEND_ACTIVATION) -->
+				<!-- IF U_SEND_PASSWORD --><dd style="text-align:center;"><a href="{U_SEND_PASSWORD}">{L_FORGOT_PASS}</a></dd><!-- ENDIF -->
+				<!-- IF U_RESEND_ACTIVATION --><dd style="text-align:center;"><a href="{U_RESEND_ACTIVATION}">{L_RESEND_ACTIVATION}</a></dd><!-- ENDIF -->
+			<!-- ENDIF -->
+		</dl>
+		<dl>
+			<!-- IF S_AUTOLOGIN_ENABLED -->
+			<dd style="text-align:center;"><label for="autologin">{L_LOG_ME_IN_SHORT}</label> <input type="checkbox" name="autologin" id="autologin" tabindex="4" class="checkbox" /></dd>
+			<!-- ENDIF -->
+		</dl>
+		<dl>
+			<dd style="text-align:center;">
+				<input type="submit" class="button2" name="login" value="{L_LOGIN}" />
+				<!--<a href="{U_LOGIN_LOGOUT}"><img src="{T_THEME_PATH}/images/icon_mini_login.gif" width="12" height="13" border="0" alt="{L_LOGIN_LOGOUT}" /> {L_LOGIN_LOGOUT}</a>-->
+			</dd>
+		</dl>
+		<dl>
+			<dd ><p style="text-align:center;" class="gensmall">{L_DONT_HAVE_ACCOUNT}<a href="ucp.php?cid=&mode=register">{L_REGISRATION}</a></p></dd>
+		</dl>
+		<br />
+	</form>		
+	<!-- ENDIF -->
+
+	<!-- IF S_USER_LOGGED_IN -->
+	<dl>
+		<dd><div style="text-align:center;"><!-- IF AVATAR -->{AVATAR}<!-- ELSE --><img src="{T_THEME_PATH}/images/no_avatar.gif" alt="" /><!-- ENDIF --></div></dd>
+	</dl>
+	<dl>
+		<dd style="text-align:center;"><span class="welcome">{WELCOME_SITE}<br />{USERNAME_FULL} <img src={USER_COUNTRY_FLAG} width="20" height="13" border="0" alt="{L_USER_COUNTRY_FLAG}"></span></dd>
+	</dl>
+	<br />
+	<dl>
+		<dd>
+			<p style="text-align:center;">
+				<a href="{U_SEARCH_NEW}">{L_SEARCH_NEW}</a><br />
+				<a href="{U_SEARCH_SELF}">{L_SEARCH_SELF}</a><br />
+				<a href="{U_SEARCH_ACTIVE_TOPICS}">{L_SEARCH_ACTIVE_TOPICS}</a><br />
+				<a href="{U_SEARCH_UNANSWERED}">{L_SEARCH_UNANSWERED}</a>
+			</p>
+		</dd>
+	</dl>
+	<dl>
+		<dd><p style="text-align:center;">
+			<a href="{U_LOGIN_LOGOUT}"><img src="{T_THEME_PATH}/images/icon_mini_login.gif" width="12" height="13" border="0" alt="{L_LOGIN_LOGOUT}" /> {L_LOGIN_LOGOUT}</a>
+			</p>
+		</dd>
+	</dl>
+	<!-- ENDIF -->
+</div>
+<!-- IDTAG block_login ends -->

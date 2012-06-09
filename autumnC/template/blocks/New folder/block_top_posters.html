@@ -1,0 +1,24 @@
+<!-- IDTAG block_top_posters.html start 15 April 2007 -->
+<dd style="text-align:center; padding:2px; position:relative;">
+	<span style="float:left; position:relative;"><b>{L_USERNAME}</b></span><span style="float:right; position:relative; padding:0;"><b>{L_POSTS}</b></span>
+</dd>
+<br />
+<dd style="text-align:center; padding:2px; position:relative;">
+<!-- BEGIN top_posters -->
+
+	<span style="float:left; padding:0; position:relative;" >
+	<!-- IF top_posters.USER_AVATAR_IMG -->
+		{top_posters.USER_AVATAR_IMG}
+	<!-- ELSE -->
+		<img src="images/avatars/no_avatar.gif">
+	<!-- ENDIF -->
+	{top_posters.USERNAME_FULL}
+	</span>
+	<span style="float:right; padding:0; position:relative;">
+		<a href="{top_posters.S_SEARCH_ACTION}">{top_posters.POSTER_POSTS}</a>
+	</span>
+	<br clear="both" />
+<!-- END top_posters --> 
+</dd>
+<br />
+<!-- IDTAG block_top_posters.html ends 15 April 2007 -->

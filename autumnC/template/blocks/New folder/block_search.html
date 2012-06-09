@@ -1,0 +1,73 @@
+<!-- IDTAG search starts -->
+<script type="text/javascript">
+<!--
+
+keywords = document.search_block.keywords.value; 
+
+function url_search() 
+{
+	switch( document.search_block.search_engine.value )
+	{
+		case 'site':
+						break;
+		case 'author':
+						window.open('search.php?author=' + document.search_block.keywords.value, '_self', '');
+						return false;
+		case 'advanced':
+						window.open('search.php', '_self', '');
+						return false;
+		case 'google':
+						window.open('http://www.google.com/search?q=' + document.search_block.keywords.value, '_google', '');
+						return false;
+		case 'yahoo':
+						window.open('http://search.yahoo.com/search?p=' + document.search_block.keywords.value, '_yahoo', '');
+						return false;
+		case 'altavista':
+						window.open('http://www.altavista.com/web/results?itag=ody&q=' + document.search_block.keywords.value + '&kgs=0&kls=0', '_altavista', '');
+						return false;
+		case 'lycos':
+						window.open('http://search.lycos.com/?query=' + document.search_block.keywords.value, '_lycos', '');
+						return false;
+		default:		break;
+	}
+
+	return true;
+}
+
+//-->
+</script> 
+
+<div align="center" style="position: relative; width:99%">
+	<form name="search_block" method="post" action="{U_SEARCH}" onsubmit="return url_search()">
+
+		<dd style="text-align:center; padding:2px; padding-bottom:2px;">
+			<input class="inputbox search" type="text" name="keywords" size="16" />&nbsp;{S_HIDDEN_FIELDS}&nbsp;
+		</dd>
+
+		<dd style="text-align:center; padding-bottom:2px; ">
+			<select class="inputbox autowidth" style="font-size:12px; padding:2px;" name="search_engine" >
+                <optgroup style="background-color: #FBFDF0;" label="{L_SITE_NAME}">
+					<option value="site" style="font-size:12px;" >{L_SITE_NAME}</option>
+					<option value="site">{L_POSTS}</option>
+				    <option value="author">{L_AUTHOR}</option>
+					<option value="advanced">{L_ADVANCED_SEARCH}</option>
+			    </optgroup>
+                <optgroup style="background-color: #FBFDF0; font-size:12px;" label="Search Engine">
+		            <option value="google">Google</option>
+			        <option value="yahoo">Yahoo</option>
+					<option value="altavista">Altavista</option>
+			        <option value="lycos">Lycos</option>
+                </optgroup> 
+			</select>
+		</dd>
+		<dd>&nbsp;</dd>
+		<dd style="text-align:center; padding:3px; ">
+			<input class="button1" type="submit" value="{L_SEARCH}" />
+			<br /><br />
+			<a href="{U_SEARCH}">{L_ADVANCED_SEARCH}</a>
+		</dd>
+		<input type="hidden" name="search_fields" value="all" />
+		<input type="hidden" name="show_results" value="topics" />
+	</form>		
+ </div>
+<!-- IDTAG search ends -->

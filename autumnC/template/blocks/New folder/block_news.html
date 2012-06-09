@@ -1,0 +1,37 @@
+<!-- IE fix, padding-left:4px and width:99% -->
+<ul style="padding:1px; position:relative; border:none; list-style-type: none; width:99%; padding-left:4px">
+	<A name="startn"></A>
+	<!-- BEGIN news_row -->
+		<!-- IF news_row.S_NO_TOPICS -->
+			<dd><center><span class="genmed"><strong>{L_NO_NEWS}</strong></span></center></dd>
+		<!-- ELSE -->
+	<div class="mynews">
+	<div class="inner">
+		<span class="corners-top"><span></span></span>
+			<ul class="newslist">
+				<li class="newslist">
+					<dd style="color:green; text-align:left; width:35%; position:relative;"> {L_TITLE}:  <a href="{news_row.U_VIEW_COMMENTS}"><strong>{news_row.TITLE}</strong></a></dd>
+					<dd style="float:center; text-align:center; width:29%; position:relative;"> {news_row.ATTACH_ICON_IMG} <!-- IF news_row.S_POLL --> <strong>{L_POLL}: </strong><!-- ENDIF --></dd>
+					<dd style="color:green; text-align:right; width:35%; position:relative;">  {L_SUBMITTED_BY}:  <a href="{news_row.U_USER_PROFILE}">{news_row.POSTER}</a>  </dd>
+				</li>
+			</ul>
+			<hr />
+			<div align="center">
+				<ul class="newslist" style="text-align:left;" >
+				{news_row.TEXT}
+				<a href="{news_row.U_USER_PROFILE}">{news_row.POSTER}</a>
+				</ul>
+			</div>
+			<dd align="left"><br />{news_row.MINI_POST_IMG}{news_row.TIME}</dd>
+				<div class="back2top">
+					<a href="{news_row.U_VIEW_COMMENTS}" title="{L_VIEW_COMMENTS}">{L_COMMENTS}: {news_row.REPLIES}</a> &nbsp; 
+					<!-- IF news_row.ALLOW_REPLY --><a href="{news_row.U_POST_COMMENT}">{L_POST_REPLY}</a> &nbsp; <!-- ENDIF --> &nbsp; 
+					<a href="{news_row.U_PRINT}">{news_row.U_PRINT_IMG}</a> &nbsp; 
+					<a href="#startn" title="Top"><img src="./styles/prosilverN/theme/images/top.gif" width="11" height="11" alt="Top" /></a></div>
+					<span class="corners-bottom"><span></span></span>
+				</div>
+			</div>
+		<!-- ENDIF -->
+		<!-- IF news_row.S_NOT_LAST --><br /><!-- ENDIF -->
+	<!-- END news_row -->
+</ul>

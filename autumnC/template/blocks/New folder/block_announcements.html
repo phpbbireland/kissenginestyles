@@ -1,0 +1,40 @@
+<!-- IE fix, padding-left:4px and width:99% -->
+<ul style="padding:1px; position:relative; border:none; list-style-type: none; width:99%; padding-left:4px">
+	<A name="start"></A>
+<!-- BEGIN fetch_announce_row -->
+		<!-- IF fetch_announce_row.S_NO_TOPICS -->
+			<center><span class="genmed"><strong>{L_NO_NEWS}</strong></span></center>
+		<!-- ELSE -->
+	<div class="mynews <!-- IF news_row.S_ROW_COUNT -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">
+		<div class="inner">
+			<span class="corners-top"><span></span></span>
+			<br />
+			<ul class="newslist">
+				<li class="newslist">
+					<dd style="color:green; text-align:left; width:34%; position:relative;"> {fetch_announce_row.TITLE}</dd>
+					<dd style="float:center; text-align:center; width:31%; position:relative;"> By: {fetch_announce_row.POSTER}</dd>
+					<dd style="color:green; text-align:right; width:34%; position:relative;" > {fetch_announce_row.TIME}</dd>
+				</li>
+			</ul>
+			<hr />
+			<div align="center">
+				<ul class="newslist" style="width:100%; text-align:left;" >
+					{fetch_announce_row.TEXT}{fetch_announce_row.SMILEIS_PATH}
+				</ul>
+			</div>
+			<br />
+			<ul class="newslist">
+				<li class="newslist">
+					<dd style="text-align:left; width:33%; position:relative;">  <a href="{fetch_announce_row.U_READ_FULL}"> {L_READ_ARTICLE}</a>  </dd>
+					<dd style="text-align:center; width:33%; position:relative;">  <a href="{fetch_announce_row.U_VIEW_COMMENTS}"> {L_VIEW_COMMENTS}</a>  </dd>
+					<dd style="text-align:right; width:33%; position:relative;" >  <a href="{fetch_announce_row.U_POST_COMMENTS}"> {L_POST_COMMENTS}</a>  </dd>
+				</li>
+			</ul>
+			<div class="back2top" valign="absbottom"><a href="#start" title="Top"><img src="./styles/prosilverN/theme/images/top.gif" width="11" height="11" alt="Top" /></a></div>
+		<span class="corners-bottom"><span></span></span>
+	</div>
+	</div>
+	<!-- ENDIF -->
+	<!-- IF fetch_announce_row.S_NOT_LAST --><br /><!-- ENDIF -->
+<!-- END fetch_announce_row -->
+</ul>

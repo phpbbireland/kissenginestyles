@@ -1,0 +1,133 @@
+<!-- INCLUDE overall_header.html -->
+<div align="center" width="99%">
+	<table border="0" cellpadding="0" cellspacing="0" style="position:relative;">
+		<tr>
+			<td width="{BLOCK_WIDTH}" valign="top" style="position: relative;" id="left">
+				<!-- BEGIN left_block_files -->
+				<div style="position: relative;" id="BLOCK_{left_block_files.LEFT_BLOCK_ID}">
+
+					<!-- INCLUDE blocks/blocks_header_left.html -->{left_block_files.LEFT_BLOCK_TITLE}
+					<div class="showhide" id="showhide" style="display:display; float: right; margin-top: -16px; margin-right: 1px;">
+					<a style="display:display;" href="#" onclick="ShowHide('{left_block_files.LEFT_BLOCK_ID}'); return(false);">
+					{left_block_files.LEFT_BLOCK_IMG}
+					</a>
+					</div>
+					<!-- INCLUDE blocks/blocks_header_right.html -->
+
+
+					<div id="{left_block_files.LEFT_BLOCK_ID}" style="display">
+						{left_block_files.LEFT_BLOCKS}
+					</div>
+
+					<!-- INCLUDE blocks/blocks_footer.html -->
+				</div>
+				<!-- END left_block_files -->
+			</td>
+			<td width="10"><img src="images/spacer.gif" alt="" width="10" height="30" /></td>
+
+			<td valign="top" align="center" width="" style="position: relative;" id="center"> 
+				<!-- BEGIN center_block_files -->
+				<div style="position: relative;" id="BLOCK_{center_block_files.CENTER_BLOCK_ID}">
+				
+
+					<!-- INCLUDE blocks/blocks_header_left.html --><div align="center">{center_block_files.CENTER_BLOCK_TITLE}</div>
+					<div class="showhide" id="showhide" style="display:display; float: right; margin-top: -16px; margin-right: 1px;">
+					<a href="#" onclick="ShowHide('{center_block_files.CENTER_BLOCK_ID}'); return(false);">{center_block_files.CENTER_BLOCK_IMG}</a>
+					</div>
+					<!-- INCLUDE blocks/blocks_header_right.html -->
+
+					<div id="{center_block_files.CENTER_BLOCK_ID}" style="display">
+					{center_block_files.CENTER_BLOCKS}
+					</div>
+
+					<!-- INCLUDE blocks/blocks_footer.html --><br /> 
+				</div>
+				<!-- END center_block_files -->
+
+
+				<!-- IF S_DISPLAY_ONLINE_LIST -->
+					<!-- INCLUDE blocks/block_whos_on_line.html -->
+				<!-- ENDIF -->
+				<!-- IF S_DISPLAY_BIRTHDAY_LIST -->
+					<!-- INCLUDE blocks/block_birthday.html -->
+				<!-- ENDIF -->
+				<!-- INCLUDE blocks/block_stats.html -->
+
+
+			</td>
+			<td width="10"><img src="images/spacer.gif" alt="" width="10" height="30" /></td>
+			<td width="{BLOCK_WIDTH}" valign="top" style="position: relative;" id="right">
+
+				<!-- BEGIN right_block_files -->
+					<div style="position: relative;" id="BLOCK_{right_block_files.RIGHT_BLOCK_ID}">
+					
+						<!-- INCLUDE blocks/blocks_header_left.html -->{right_block_files.RIGHT_BLOCK_TITLE}
+						<div class="showhide" id="showhide" style="display:display; float: right; margin-top: -16px; margin-right: 1px;">
+							<a style="display:display;" href="#" onclick="ShowHide('{right_block_files.RIGHT_BLOCK_ID}'); return(false);">
+							{right_block_files.RIGHT_BLOCK_IMG}
+							</a>
+						</div>
+						<!-- INCLUDE blocks/blocks_header_right.html -->
+
+						<div id="{right_block_files.RIGHT_BLOCK_ID}" style="display">
+						{right_block_files.RIGHT_BLOCKS}
+						</div>
+						<!-- INCLUDE blocks/blocks_footer.html -->
+
+					</div>
+				<!-- END right_block_files -->
+			</td>
+		</tr>
+	</table>
+<br />
+</div>
+<!-- INCLUDE overall_footer.html -->
+
+
+<div style="display:none">
+<pre id="leftdebug"></pre>
+<pre id="centerdebug"></pre>
+<pre id="rightdebug"></pre>	
+</div>
+
+ <script type="text/javascript">
+ var _sort;
+ var _right;
+ var _center;
+
+ // <![CDATA[
+	Sortable.create("left",
+		{tag:'div',dropOnEmpty:true,handle:'handle',containment:["left","center","right"],constraint:false,
+		onChange:
+			function()
+			{
+				$('leftdebug').innerHTML = Sortable.serialize('left');
+				_sort = $('leftdebug').innerHTML = Sortable.serialize('left');
+				$('centerdebug').innerHTML = Sortable.serialize('center');
+				$_center = Sortable.serialize('center');
+				$('rightdebug').innerHTML = Sortable.serialize('right');
+				$_right = Sortable.serialize('right');
+			}
+		});
+	Sortable.create("center",
+		{tag:'div',dropOnEmpty:true,handle:'handle',containment:["left","center","right"],constraint:false,
+		onChange:
+			function()
+			{
+				$('leftdebug').innerHTML = Sortable.serialize('left');
+				$('centerdebug').innerHTML = Sortable.serialize('center');
+				$('rightdebug').innerHTML = Sortable.serialize('right');
+			}
+		});
+	Sortable.create("right",
+		{tag:'div',dropOnEmpty:true,handle:'handle',containment:["left","center","right"],constraint:false,
+		onChange:
+			function()
+			{
+				$('leftdebug').innerHTML = Sortable.serialize('left');
+				$('centerdebug').innerHTML = Sortable.serialize('center');
+				$('rightdebug').innerHTML = Sortable.serialize('right');
+			}
+		});
+ // ]]>
+</script>

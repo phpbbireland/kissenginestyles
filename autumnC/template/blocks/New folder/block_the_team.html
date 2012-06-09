@@ -1,0 +1,36 @@
+<!-- IDTAG block_the_team.html starts 15 April 2007 -->
+
+<dd style="text-align:center; padding:3px;">
+	<font color"{which_row.GROUP_COLOR}"><b>{L_ADMINISTRATORS}</b>
+</dd>
+
+<!-- BEGIN admin -->
+<dd style="text-align:LEFT; padding:3px;">
+	<span style="float:left; position:relative;"><img src="{T_THEME_PATH}/images/admins.png" /> <strong>{admin.USERNAME_FULL}</strong></span>
+	<span style="float:right; padding-top: 4px;  position:relative;">{admin.COUNTRY_FLAG_IMG}</span>
+	<br clear="both" />
+</dd>
+<!-- BEGINELSE -->
+<dd style="text-align:LEFT; padding:3px;">
+	<span style="float:left;">{L_NO_ADMINS}</span>
+	<span style="float:right;">{admin.COUNTRY_FLAG_IMG}</span>
+	<br clear="both" />
+</dd>
+<!-- END admin -->
+
+<hr>
+<dd style="text-align:center; padding:3px;"><b>{L_MODERATORS}</b></dd>
+<!-- BEGIN mod -->
+<dd style="text-align:left; padding:2px;">
+	<span style="float:left;  position:relative;"><img src="{T_THEME_PATH}/images/mods.png" /> <strong>{mod.USERNAME_FULL}</strong></span>
+	<span style="float:right; padding-top: 4px;  position:relative;">{mod.COUNTRY_FLAG_IMG}</span>
+	<br clear="both" />
+</dd>
+<!-- BEGINELSE -->
+<dd>
+	<span style="float:left;">{L_NO_MODS}</span>
+	<br clear="both" />
+</dd>
+<!-- END mod -->
+
+<!-- IDTAG block_the_team.html ends 15 April 2007 -->

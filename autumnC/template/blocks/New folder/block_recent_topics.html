@@ -1,0 +1,26 @@
+<!-- IDTAG block_recent_topics starts 12 April 2007 -->
+<dd style="text-align:left; padding:2px;">
+	<!-- BEGIN scroll -->
+		<marquee id="recent_topics" behavior="scroll" direction="up" height="200" scrolldelay="100" scrollamount="2" loop='infinite' onmouseover='this.stop()' onmouseout='this.start()' >
+		<br /><br />
+		<!-- BEGIN recent_topic_row -->
+		<a href="{scroll.recent_topic_row.U_TITLE}" ><span style="font-size: 11px;"><b>{scroll.recent_topic_row.L_TITLE}</b></span></a><br />
+		<span style="font-size: 10px;">
+		by <a href="{scroll.recent_topic_row.U_POSTER}" >{scroll.recent_topic_row.S_POSTER}</a>{scroll.recent_topic_row.S_POSTTIME}<br />
+		</span>
+		<!-- END recent_topic_row -->
+		<br /><br /><br /><br /><br /><br />
+		</marquee>
+		<!-- END scroll -->
+			<!-- BEGIN static -->
+		<!-- BEGIN recent_topic_row -->
+		<a href="{scroll.recent_topic_row.U_TITLE}" ><span style="font-size: 11px;"><b>{static.recent_topic_row.L_TITLE}</b></span></a><br />
+		<span style="font-size: 10px;">
+		by: <a href="{static.recent_topic_row.U_POSTER}">{static.recent_topic_row.S_POSTER}</a> <br />{static.recent_topic_row.S_POSTTIME}<br />
+		</span>
+		<img src="./images/spacer.gif" width="100%" height="2px" alt=""/>
+		<!-- END recent_topic_row -->
+		<!-- END static -->
+	</span>
+</dd>
+<!-- IDTAG block_recent_topics ends -->

@@ -1,0 +1,20 @@
+<dd style="padding:0; position:relative" align="center">
+<!-- IF S_SCROLL -->
+	<marquee id='links' behavior='scroll' direction={SCROLL_DIRECTION} height="180" scrolldelay="100" scrollamount={SCROLL_AMOUNT} loop='infinite' onmouseover='this.stop()' onmouseout='this.start()' >
+	<a href={LINKSCONTENT}</a>
+	</marquee>
+<!-- ELSE -->
+
+<div style="text-align:center;">
+	<dd style="padding:0;">
+		{LINKSCONTENT}
+	</dd>
+</div>
+
+<!-- ENDIF -->
+</dd>
+<br />
+<dd style="padding:0; padding-left:33px; padding-bottom:15px;">
+<div class="buttons"><div class="k_button_upload-icon"><a href="{SUBMIT_LINK}"><span>{L_UPLOAD_LINK}</span></a></div></div>
+<br />
+</dd>

@@ -1,0 +1,76 @@
+<!-- BEGIN switch_calendar_add_events -->
+<form name="mini_cal" id ="mini_cal" action="{S_CALENDAR_ACTION}" method="post">
+<!-- END switch_calendar_add_events -->
+<div align="center" valign="center">
+<!--[if IE]>
+</div><div style="text-align:center;">
+<![endif]-->
+<table  width="90%" border="0">
+
+	<td align="top" align="center">
+		<div align="center" valign="center">
+  		<table width="98%" cellpadding="0" cellspacing="0" border="0" align="center">
+			<tr align="center">
+		       	<td style="text-align:left;"   colspan="1">{U_PREV_MONTH}</div></td>
+				<td style="text-align:center;" colspan="5"><b><font color="#567592">{L_CALENDAR_MONTH}</font></b></td>
+		       	<td style="text-align:right;"  colspan="1">{U_NEXT_MONTH}</div></td>
+			</tr>
+		</table>
+		</div>
+		<div align="center" valign="center">
+  		<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+			<tr>
+				<td style="text-align:center;" style="font-size:10px; width:15%;"><font color="#F20000">{L_CALENDAR_SUN}</font></td>
+				<td style="text-align:center;" style="font-size:10px; width:14%;"><font color="#527096">{L_CALENDAR_MON}</font></td>
+				<td style="text-align:center;" style="font-size:10px; width:14%;"><font color="#527096">{L_CALENDAR_TUE}</font></td>
+				<td style="text-align:center;" style="font-size: 9px; width:14%;"><font color="#527096">{L_CALENDAR_WED}</font></td>
+				<td style="text-align:center;" style="font-size:10px; width:14%;"><font color="#527096">{L_CALENDAR_THU}</font></td>
+				<td style="text-align:center;" style="font-size:10px; width:14%;"><font color="#527096">{L_CALENDAR_FRI}</font></td>
+				<td style="text-align:center;" style="font-size:10px; width:15%;"><font color="#527096">{L_CALENDAR_SAT}</font></td>
+			</tr>
+		</table>
+		</div>
+		<div align="left">
+  		<table width="98%" cellpadding="0" cellspacing="1" border="0" align="left">
+			<!-- BEGIN calendar_row -->
+			<tr>
+				<!-- BEGIN calendar_days -->
+				<td style="font-size:10px; text-align:right; padding:none;"> {calendar_row.calendar_days.CALENDAR_DAY} </font></td>
+				<!-- END calendar_days -->
+			</tr>
+			<!-- END calendar_row -->
+		</table>
+		</div>
+	</td>
+
+<!--
+  <!-- BEGIN switch_calendar_birthdays -->
+  <tr><td class="row1cal" align="left"><span class="gensmall">{L_WHOSBIRTHDAY_TODAY}</span></td></tr>
+  <tr><td class="row1cal" align="left"><span class="gensmall">{L_WHOSBIRTHDAY_WEEK}</span></td></tr> 
+  <!-- END switch_calendar_birthdays -->
+  <!-- BEGIN switch_calendar_events -->
+  <tr><td class="row2cal" height="24"><span class="">{L_CALENDAR_EVENTS}</span></td></tr>
+  <!-- END switch_calendar_events -->
+  <!-- BEGIN calendar_events -->
+  <tr><td class="row1cal"><span class="gensmall">{calendar_events.CALENDAR_EVENT_DATE} - <a href="{calendar_events.U_CALENDAR_EVENT}" class="gensmall">{calendar_events.S_CALENDAR_EVENT}</a></span></td></tr>
+  <!-- END calendar_events -->
+  <!-- BEGIN calendar_no_events -->
+  <tr><td class="row1cal"><span class="genmed">{L_CALENDAR_NO_EVENTS}</span></td></tr>
+  <!-- END calendar_no_events -->
+  <!-- BEGIN switch_calendar_add_events -->
+  <tr><td class="row1cal" height="24" align="center">
+        <span class="genmed">
+            {S_CALENDAR_EVENTS_FORUMS_LIST} <input type="submit" value="{L_CALENDAR_ADD_EVENT}" class="liteoption" />
+            <input type="Hidden" name="mode" id="mode" value="newtopic" />
+        </span>
+      </td>
+  </tr>
+  <!-- END switch_calendar_add_events -->
+  -->
+
+</table>
+<br /> 
+
+<!-- BEGIN switch_calendar_add_events -->
+</form>
+<!-- END switch_calendar_add_events -->
