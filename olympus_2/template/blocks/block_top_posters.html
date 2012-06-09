@@ -1,0 +1,28 @@
+<!-- IDTAG block_top_posters.html start 13 September 2007 -->
+<div class="block_data">
+	<div>
+		<span style="position: relative; float:left; text-align:left;"><b>{L_USERNAME}</b></span>
+		<span style="position: relative; float:right; text-align:right;"><b>{L_POSTS}</b></span>
+	</div>
+	<div><span style="position: relative; float:left; width:99%; padding-bottom:3px;"></span></div><div><hr /></div>
+
+	<!-- BEGIN top_posters -->
+	<div class="trow">
+		<span class="bg2 tleft" style="padding-left:1px; padding-right:1px;"><!-- IF top_posters.USER_AVATAR_IMG -->{top_posters.USER_AVATAR_IMG}<!-- ELSE --><img src="{T_THEME_PATH}/images/no_avatar.gif" width="16" height="16" alt="" /><!-- ENDIF --></span>
+		<span class="bg2 tleft" style="padding-left:1px; text-align:left;  width:160px; overflow:hidden;">{top_posters.USERNAME_FULL}</span>
+		<span class="bg2 tleft" style="padding-right:1px; text-align:right; min-width:25px; overflow:auto;"><a href="{top_posters.S_SEARCH_ACTION}">{top_posters.POSTER_POSTS}</a></span>
+	</div>
+	<!-- END top_posters -->
+
+	<div>
+		<span class="bg2" style="position: relative; float:left; text-align:center; width:100%; padding:0;" >
+			<!--{L_SOMEINFO}-->
+		</span>
+	</div>
+
+<!-- IF DEBUG_QUERIES -->{TOP_POSTERS_DEBUG}<!-- ENDIF -->
+</div>
+
+<!-- IDTAG block_top_posters.html ends 15 April 2007 -->
+
+<!-- FIX Safari --><br style="clear:both;" /><!-- FIX Safari -->

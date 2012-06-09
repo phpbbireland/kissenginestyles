@@ -1,0 +1,18 @@
+<!--[if gt IE 8]><!-->
+<!-- IF S_DISPLAY_BIRTHDAY_LIST -->
+{$HEADER_WIDE_LEFT}
+{L_BIRTHDAYS} <img class="bsw_mini_img" src="{T_THEME_PATH}/images/portal/mini_birthday.gif" height="12" width="14" alt="{L_BIRTHDAYS}" />
+{$HEADER_WIDE_RIGHT}
+{$HEADER_WIDE_BODY_LEFT}
+<div class="xbox" style="text-align:left; padding-right:100%; width:100%; margin-top: -5px; margin-bottom: -5px;">
+	<span style="float:left; padding:3px; padding-top:10px;"><img src="{T_THEME_PATH}/images/portal/birthday.gif" alt="{L_BIRTHDAYS}" /></span>
+	<div style="margin-left:55px; border-left: solid 1px #B7B7B6;">
+		<div class="row1" style="padding: 5px; min-height:44px; margin-right:-1px">
+			<!-- IF BIRTHDAY_LIST -->{L_CONGRATULATIONS}: <b>{BIRTHDAY_LIST}</b><!-- ELSE --><br />{L_NO_BIRTHDAYS}...<!-- ENDIF -->
+		</div>
+	</div>
+</div>
+{$HEADER_WIDE_BODY_RIGHT}
+{$FOOTER_WIDE}
+<!-- ENDIF -->
+<!--<![endif]-->

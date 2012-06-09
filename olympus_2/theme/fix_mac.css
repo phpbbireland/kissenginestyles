@@ -1,0 +1,48 @@
+.arrange_on, .arrange_off {
+	margin-top:-22px;
+}
+
+.b_cap-right { margin-top:-51px;}
+.show_in_ie { display:none; }
+.show_in_opera { display:block; }
+.top_gap {padding-top: 12px;}
+
+.left_blocks_col_show {margin-bottom: 1px; margin-top: -5px; }
+.right_blocks_col_show {margin-bottom: 1px; margin-top: -5px;}
+
+
+.block_body_fill_left { float:none; }
+.block_body_fill_right { float:none; }
+.block_data { float:none; }
+.block_body_fill { float:none; }
+
+.left, .right { float:none; }
+
+.show_in_ie { display:inline; }
+
+/**
+* block arrane/hide css 12 November 2011
+**/
+
+.bmove {
+  float:right; margin-top:-1px; padding-right: 2px; cursor: move;
+}
+.bhide {
+  float:left; margin-top:-1px; padding-left: 2px;
+}
+.blimage
+{
+  float:left; margin-top:-1px; padding-left: 2px;;
+}
+.brimage
+{
+  float:right; margin-top:-1px; padding-right: 2px;
+}
+.bchide {
+  float:right; margin-top:-1px; padding-right: 2px;
+}
+
+.block_body {min-width: 170px;}
+
+
+#center { width:100%; max-width:430px; }

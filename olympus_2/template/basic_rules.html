@@ -1,0 +1,32 @@
+<!-- IF STARGATE -->
+	<!-- INCLUDE overall_header.html -->
+		<div class="inner">
+			{$HEADER_WIDE_LEFT}
+			<div>
+				{L_BASIC_RULES_HEADER} <img class="bsw_mini_img" src="{T_THEME_PATH}/images/portal/terms_of_use.png" height="16" width="16" alt="report" />
+			</div>
+			{$HEADER_WIDE_RIGHT}
+			<div class="box_new">
+				{$HEADER_WIDE_BODY_LEFT}
+				<div style="margin:5px;">
+				<!-- BEGIN basic_rules -->
+					{basic_rules.BASIC_RULES}<br />
+				<!-- END basic_rules -->
+				</div>
+				{$HEADER_WIDE_BODY_RIGHT}
+			</div>
+			{$FOOTER_WIDE}
+		</div>
+		<!-- IF STARGATE -->
+			<!-- IF S_DISPLAY_ONLINE_LIST -->
+				<!-- INCLUDE blocks/block_whos_on_line.html -->
+			<!-- ENDIF -->
+			<!-- IF S_DISPLAY_BIRTHDAY_LIST -->
+				<!-- INCLUDE blocks/block_birthday.html -->
+			<!-- ENDIF -->
+			<!-- IF NEWEST_USER -->
+				<!-- INCLUDE blocks/block_stats.html -->
+			<!-- ENDIF -->
+		<!-- ENDIF -->
+	<!-- INCLUDE overall_footer.html -->
+<!-- ENDIF -->

@@ -1,0 +1,36 @@
+/* Mike - Last Updated: 14 August 2009 */
+.top_gap {clear:both; padding-top: 27px;}
+.b_cap-right { margin-top: -51px; }
+.show_in_ie { display:none; }
+
+.highslide { cursor: pointer; }
+
+.left_blocks_col_show {margin-bottom: 3px; margin-top: 3px;}
+.right_blocks_col_show {margin-bottom: 3px; margin-top: 3px;}
+
+.block_body_fill_left { float: none; }
+.block_body_fill_right { float: none; }
+.block_data { float: none; }
+
+.show_in_ie { display: inline; }
+
+
+/**
+* block arrane/hide css 12 November 2011
+**/
+
+.bmove {
+  float:right; margin-top:-1px; padding-right: 2px; cursor: move;
+}
+.bcmove {
+  float:right; margin-top:-12px; padding-right: 2px; cursor: move;
+}
+
+.bhide, .blimage, .brimage
+{
+  float:right; margin-top:-1px; padding-right: 2px;
+}
+
+.bcimage, .bchide {
+  float:right; margin-top:-12px; padding-right: 2px;
+}

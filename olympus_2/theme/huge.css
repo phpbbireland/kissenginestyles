@@ -1,0 +1,33 @@
+/*
+	set sizes... this file will over-ride previously set css tags
+	Michaelo phpbbireland.com 02 April 2008
+*/
+
+
+/* highslide 02 April 2008 */
+
+.highslide img{max-width: 500px; max-height: 400px;}
+
+/* the following works but produces errors warnings so we will wait until it becomes the norm
+.highslide img{width:expression(width>600?"600":width)}
+.highslide img{height:expression(height>600?"600":height)}
+*/
+
+/* max pagecontent size based on window size */
+.codebox, postbody {
+	max-height: 313px;
+	width:auto;
+	max-width:950px;
+}
+
+/* these fix the stretch in moderators control panel subsilver type styles 
+.sgp_codefix2 {
+	width:auto;
+	max-width:1024px;
+	width:1024px;
+}
+*/
+
+.site_logo {
+	padding-left:500px;
+}

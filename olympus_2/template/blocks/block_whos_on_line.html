@@ -1,0 +1,32 @@
+<!--[if gt IE 8]><!-->
+<!-- IDTAG block_whos_on_line starts 13 September 2007 -->
+{$HEADER_WIDE_LEFT}
+	<a href="{U_VIEWONLINE}"> {L_WHO_IS_ONLINE} <img class="bsw_mini_img" src="{T_THEME_PATH}/images/portal/mini_whosonline.gif" height="12" width="14" alt="{L_WHO_IS_ONLINE}" /></a>
+{$HEADER_WIDE_RIGHT}
+{$HEADER_WIDE_BODY_LEFT}
+	<!-- IF S_DISPLAY_ONLINE_LIST -->
+
+<div class="xbox" style="text-align:left; padding-right:100%; width:100%; margin-top: -5px; margin-bottom: -5px;">
+
+		<span style="float:left; padding:3px; padding-top:30px;"><img src="{T_THEME_PATH}/images/portal/whosonline.gif" alt="{L_WHO_IS_ONLINE}"/></span>
+		<div style="margin-left:55px; border-left: solid 1px #B7B7B6; height:inherit" >
+			<div class="row1" style="padding: 5px; min-height:40px; margin-right:-1px">
+				{TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}<br /><br />{LOGGED_IN_USER_LIST}<br /><br />
+
+				<!-- IF not S_IS_BOT -->
+					<!-- IF USERS_24HOUR_TOTAL != '' -->
+					{USERS_24HOUR_TOTAL}: <!-- BEGIN lastvisit -->{lastvisit.USERNAME_FULL}<!-- IF not lastvisit.S_LAST_ROW -->, <!-- ENDIF --><!-- END lastvisit -->
+					<!-- ENDIF -->
+				<!-- ENDIF -->
+			</div>
+
+			<div class="row1" style="padding: 5px; border-top: solid 1px #B7B7B6; margin-right:-1px;">
+				<!-- IF LEGEND --><em><strong>{L_LEGEND}:</strong> {LEGEND}</em><!-- ENDIF -->
+			</div>
+		</div>
+	</div>
+	<!-- ENDIF -->
+{$HEADER_WIDE_BODY_RIGHT}
+{$FOOTER_WIDE}
+<!-- IDTAG block_whos_on_line ends -->
+<!--<![endif]-->

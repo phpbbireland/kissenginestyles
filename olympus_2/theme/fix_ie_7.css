@@ -1,0 +1,27 @@
+/*
+	iefixes.css
+
+	This file is required to fix IE bugs... 
+	Michaelo phpbbireland.com 02 April 2008
+*/
+
+/* highslide 02 April 2008 */
+.highslide img	{ max-width:350px; }
+
+/* in search 10 February 2008 */
+input.full	{ width: 99%; }
+
+
+/* Menu icons not sizing correctly IE bug*/
+div.sdmenu span {
+   padding:1px;
+}
+
+.member { margin: 58px -25px 0 -22px; }
+.top_posters {margin-top: -3px;}
+
+
+
+.block_body_fill_left { float:none; }
+.block_body_fill_right { float:none;}
+.block_data { float:none; }

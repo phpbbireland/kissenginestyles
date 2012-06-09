@@ -1,0 +1,10 @@
+/* Fix Firefox - Last Updated: 20 November 2011 */
+.ie_version { display:none; }
+
+.bcmove
+{
+  float:right; margin-top:-12px; padding-right: 2px;
+}
+.bchide {
+  float:right; margin-top:-12px; padding-right: 2px;
+}

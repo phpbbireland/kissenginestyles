@@ -1,0 +1,14 @@
+/*
+	iefixes.css
+
+	This file is required to fix IE bugs... 
+	Michaelo phpbbireland.com 02 April 2008
+*/
+
+/* highslide 02 April 2008 */
+
+.highslide img{max-width: 250px;max-height: 250px;}
+.highslide img{width:expression(width>250?"250":width)}
+.highslide img{height:expression(height>250?"250":height)}
+
+/* add image tags here... do not use .img */
