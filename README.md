@@ -1,5 +1,5 @@
-kissenginestyles
-================
+Kiss Portal Engine Styles
+=========================
 
 Pre-edited style for Kiss Portal Engine and phpBB3...
 
