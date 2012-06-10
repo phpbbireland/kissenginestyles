@@ -25,8 +25,7 @@
 	<!-- IF S_DISPLAY_BIRTHDAY_LIST -->
 		<!-- INCLUDE blocks/block_birthday.html -->
 	<!-- ENDIF -->
-
-	<!-- IF S_DISPLAY_BIRTHDAY_LIST and BIRTHDAY_LIST -->
+	<!-- IF NEWEST_USER -->
 		<!-- INCLUDE blocks/block_stats.html -->
 	<!-- ENDIF -->
 <!-- ENDIF -->
@@ -55,11 +54,6 @@
 	<!-- IF S_DISPLAY_ONLINE_LIST -->
 		<!-- IF U_VIEWONLINE --><h3><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h3><!-- ELSE --><h3>{L_WHO_IS_ONLINE}</h3><!-- ENDIF -->
 		<p>{TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}<br /> <br />{LOGGED_IN_USER_LIST}
-
-		<!-- IF not S_IS_BOT --><br /><br />
-		{USERS_24HOUR_TOTAL}: <!-- BEGIN lastvisit -->{lastvisit.USERNAME_FULL}<!-- IF not lastvisit.S_LAST_ROW -->, <!-- ENDIF --><!-- END lastvisit -->
-		<!-- ENDIF -->
-
 		<!-- IF LEGEND --><br /><em>{L_LEGEND}: {LEGEND}</em><!-- ENDIF --></p>
 	<!-- ENDIF -->
 
@@ -71,16 +65,6 @@
 	<!-- IF NEWEST_USER -->
 		<h3>{L_STATISTICS}</h3>
 		<p>{TOTAL_POSTS} &bull; {TOTAL_TOPICS} &bull; {TOTAL_USERS} &bull; {NEWEST_USER}</p>
-
-		<!-- IF not S_IS_BOT -->
-		<h3 id="24hour_stats">{L_24HOUR_STATS}</h3>
-		<p>{24HOUR_POSTS} &bull; {24HOUR_TOPICS} &bull; {24HOUR_USERS}</p>
-		<!-- ENDIF -->
-
-		<!-- IF not S_IS_BOT -->
-			<h3 id="24hour_stats">{L_24HOUR_STATS}</h3>
-			<p>{24HOUR_POSTS} &bull; {24HOUR_TOPICS} &bull; {24HOUR_USERS}</p>
-		<!-- ENDIF -->
 	<!-- ENDIF -->
 <!-- ENDIF -->
 

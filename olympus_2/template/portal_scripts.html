@@ -46,7 +46,7 @@
 <script type="text/javascript" src="{ROOT_PATH}js/portal.js"></script>
 <script type="text/javascript" src="{ROOT_PATH}js/forum_fn.js"></script>
 
-<!-- IF not S_HIGHSLIDE -->
+<!-- IF S_HIGHSLIDE -->
 <script type="text/javascript" src="{ROOT_PATH}js/highslide/highslide-full.packed.js"></script>
 <link rel="stylesheet" type="text/css" href="{ROOT_PATH}js/highslide/highslide.css" />
 
@@ -109,7 +109,6 @@
 		var oprversion=new Number(RegExp.$1)
 		$css_file_append = 'fix_mac.css';
 	}
-	//alert($css_file_append);
 
 	jQuery.noConflict();
 	jQuery(document).ready(function(){
@@ -199,7 +198,7 @@
 		}).next().hide();
 	});
 
-//]]&gt;
+//]]>
 </script>
 
 <!-- IF RESIZE -->

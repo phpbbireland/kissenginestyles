@@ -18,17 +18,6 @@
 // ]]>
 </script>
 
-
-<script type="text/javascript">
-// <![CDATA[
-function DisplayFlag(myForm)
-{
-    var flagname = myForm.user_country_flag;
-    document.getElementById("UserFlag").innerHTML = " <img align='absmiddle' src='./images/flags/" + flagname.value + "' />"
-}
-// ]]>
-</script>
-
 <form method="post" action="{S_UCP_ACTION}" id="register">
 
 <div class="panel sgp-corners">
@@ -72,16 +61,6 @@ function DisplayFlag(myForm)
 		<dt><label for="tz">{L_TIMEZONE}:</label></dt>
 		<dd><select name="tz" id="tz" tabindex="7" class="autowidth">{S_TZ_OPTIONS}</select></dd>
 	</dl>
-
-	<!-- IF STARGATE -->
-	<dl>
-		<dt><label for="user_country_flag">{L_USER_COUNTRY_FLAG}:</label></dt>
-		<dd>
-		<select name="user_country_flag" id="user_country_flag" onchange="DisplayFlag(this.form); return false;" /> {S_USER_COUNTRY_FLAG_OPTIONS}</select>
-		<span  name='UserFlag' id='UserFlag'><img src="./images/flags/{USER_COUNTRY_FLAG_IMG}" align="absmiddle" /></span>
-		</dd>
-	</dl>
-	<!-- ENDIF -->
 
 	<!-- IF .profile_fields -->
 		<dl><dd><strong>{L_ITEMS_REQUIRED}</strong></dd></dl>

@@ -125,13 +125,13 @@
 
 	<!-- IF topicrow.S_FIRST_ROW or not topicrow.S_TOPIC_TYPE_SWITCH -->
 	<div class="block_body sgp-corners" style="margin-bottom:15px;">
-		<div class="xforumbg<!-- IF topicrow.S_TOPIC_TYPE_SWITCH --> announcement<!-- ENDIF -->">
+		<div class="xforumbg<!-- IF topicrow.S_TOPIC_TYPE_SWITCH and (topicrow.S_POST_ANNOUNCE or topicrow.S_POST_GLOBAL) --> announcement<!-- ENDIF -->">
 
 			<div class="cap-left_wide"><div class="cap-right_wide"><div class="block_header_wide">
 				<ul class="topiclist">
 					<li class="header">
 						<dl class="icon">
-							<dt> &nbsp; <!-- IF S_DISPLAY_ACTIVE -->{L_ACTIVE_TOPICS}<!-- ELSEIF topicrow.S_TOPIC_TYPE_SWITCH and (topicrow.S_POST_ANNOUNCE or topicrow.S_POST_GLOBAL) -->{L_ANNOUNCEMENTS}<!-- ELSE -->{L_TOPICS}<!-- ENDIF --></dt>
+							<dt> &nbsp; <!-- IF S_DISPLAY_ACTIVE -->{L_ACTIVE_TOPICS}<!-- ELSEIF topicrow.S_TOPIC_TYPE_SWITCH and (topicrow.S_POST_ANNOUNCE or topicrow.S_POST_GLOBAL or topicrow.S_POST_NEWS or topicrow.S_POST_NEWS_GLOBAL) -->{L_ANNOUNCEMENTS_AND_NEWS}<!-- ELSE -->{L_TOPICS}<!-- ENDIF --></dt>
 							<dd class="posts">{L_REPLIES}</dd>
 							<dd class="views">{L_VIEWS}</dd>
 							<dd class="lastpost"><span>{L_LAST_POST}</span></dd>
@@ -146,7 +146,7 @@
 	<!-- ENDIF -->
 					<li class="row<!-- IF topicrow.S_ROW_COUNT is even --> bg1<!-- ELSE --> bg2<!-- ENDIF --><!-- IF topicrow.S_POST_GLOBAL --> global-announce<!-- ENDIF --><!-- IF topicrow.S_POST_ANNOUNCE --> announce<!-- ENDIF --><!-- IF topicrow.S_POST_STICKY --> sticky<!-- ENDIF --><!-- IF topicrow.S_TOPIC_REPORTED --> reported<!-- ENDIF -->">
 						<dl class="icon" style="background-image: url({topicrow.TOPIC_FOLDER_IMG_SRC}); background-repeat: no-repeat;">
-							<dt<!-- IF topicrow.TOPIC_ICON_IMG and S_TOPIC_ICONS --> style="background-image: url({T_ICONS_PATH}{topicrow.TOPIC_ICON_IMG}); background-repeat: no-repeat;"<!-- ENDIF --> title="{topicrow.TOPIC_FOLDER_IMG_ALT}"><!-- IF topicrow.S_UNREAD_TOPIC --><a href="{topicrow.U_NEWEST_POST}">{NEWEST_POST_IMG}</a> <!-- ENDIF --><a href="{topicrow.U_VIEW_TOPIC}" class="topictitle">{topicrow.TOPIC_TITLE}</a>
+							<dt<!-- IF topicrow.TOPIC_ICON_IMG and S_TOPIC_ICONS --> style="background-image: url({T_ICONS_PATH}{topicrow.TOPIC_ICON_IMG}); background-repeat: no-repeat;"<!-- ENDIF --> title="{topicrow.TOPIC_FOLDER_IMG_ALT}"><!-- IF topicrow.S_UNREAD_TOPIC --><a href="{topicrow.U_NEWEST_POST}">{NEWEST_POST_IMG}</a> <!-- ENDIF --><a href="{topicrow.U_VIEW_TOPIC}" <!-- IF STARGATE -->title="{topicrow.TOOLTIP}"<!-- ENDIF --> class="topictitle">{topicrow.TOPIC_TITLE}</a>
 								<!-- IF topicrow.S_TOPIC_UNAPPROVED or topicrow.S_POSTS_UNAPPROVED --><a href="{topicrow.U_MCP_QUEUE}">{topicrow.UNAPPROVED_IMG}</a> <!-- ENDIF -->
 								<!-- IF topicrow.S_TOPIC_REPORTED --><a href="{topicrow.U_MCP_REPORT}">{REPORTED_IMG}</a><!-- ENDIF --><br />
 								<!-- IF topicrow.PAGINATION --><strong class="pagination"><span>{topicrow.PAGINATION}</span></strong><!-- ENDIF -->

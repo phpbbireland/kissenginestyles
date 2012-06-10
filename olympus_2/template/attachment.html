@@ -5,17 +5,9 @@
 	<!-- ELSE -->
 
 		<!-- IF _file.S_THUMBNAIL -->
-		<div class="highslide-gallery">
 		<dl class="thumbnail">
-			<dt>
-				<a href="{_file.U_DOWNLOAD_LINK}/{_file.DOWNLOAD_NAME}" class="highslide" onclick="return hs.expand(this)"><img src="{_file.THUMB_IMAGE}" alt="{_file.DOWNLOAD_NAME}" title="{L_CLICK_TO_ENLARGE}" /></a>
-				<div class="highslide-caption">{_file.DOWNLOAD_NAME} ({_file.FILESIZE} {_file.SIZE_LANG})</div>
-			</dt>
+			<dt><a href="{_file.U_DOWNLOAD_LINK}"><img src="{_file.THUMB_IMAGE}" alt="{_file.DOWNLOAD_NAME}" title="{_file.DOWNLOAD_NAME} ({_file.FILESIZE} {_file.SIZE_LANG}) {_file.L_DOWNLOAD_COUNT}" /></a></dt>
 			<!-- IF _file.COMMENT --><dd> {_file.COMMENT}</dd><!-- ENDIF -->
-		</dl>
-		</div>
-		<dl class="file">
-			<dd>{_file.DOWNLOAD_NAME} ({_file.FILESIZE} {_file.SIZE_LANG}) {_file.L_DOWNLOAD_COUNT}</dd>
 		</dl>
 		<!-- ENDIF -->
 
